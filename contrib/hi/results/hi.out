@@ -1,0 +1,18 @@
+CREATE TABLE test_table (
+num1 int,
+str1 text,
+what bool
+);
+CREATE EXTENSION hi;
+SELECT get_int_x2(2) as gix2;
+ gix2 
+------
+    4
+(1 row)
+
+SELECT func_for_rTest(2,4) as ffrt;
+ ffrt 
+------
+    8
+(1 row)
+
