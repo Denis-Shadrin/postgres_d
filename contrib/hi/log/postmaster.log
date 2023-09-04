@@ -1,11 +1,11 @@
-2023-07-18 11:02:18.525 +07 postmaster[9188] LOG:  starting PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
-2023-07-18 11:02:18.525 +07 postmaster[9188] LOG:  listening on Unix socket "/tmp/pg_regress-N7HmSF/.s.PGSQL.51699"
-2023-07-18 11:02:18.526 +07 startup[9193] LOG:  database system was shut down at 2023-07-18 11:02:18 +07
-2023-07-18 11:02:18.527 +07 postmaster[9188] LOG:  database system is ready to accept connections
-2023-07-18 11:02:19.645 +07 postmaster[9188] LOG:  received fast shutdown request
-2023-07-18 11:02:19.645 +07 postmaster[9188] LOG:  aborting any active transactions
-2023-07-18 11:02:19.646 +07 postmaster[9188] LOG:  background worker "logical replication launcher" (PID 9196) exited with exit code 1
-2023-07-18 11:02:19.646 +07 checkpointer[9191] LOG:  shutting down
-2023-07-18 11:02:19.646 +07 checkpointer[9191] LOG:  checkpoint starting: shutdown immediate
-2023-07-18 11:02:19.662 +07 checkpointer[9191] LOG:  checkpoint complete: wrote 892 buffers (5.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.015 s, sync=0.001 s, total=0.016 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4022 kB, estimate=4022 kB
-2023-07-18 11:02:19.675 +07 postmaster[9188] LOG:  database system is shut down
+2023-08-31 21:55:10.064 +07 postmaster[1708] LOG:  starting PostgreSQL 15.3 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+2023-08-31 21:55:10.064 +07 postmaster[1708] LOG:  listening on Unix socket "/tmp/pg_regress-fAsAj4/.s.PGSQL.51699"
+2023-08-31 21:55:10.065 +07 startup[1713] LOG:  database system was shut down at 2023-08-31 21:55:10 +07
+2023-08-31 21:55:10.066 +07 postmaster[1708] LOG:  database system is ready to accept connections
+2023-08-31 21:55:11.112 +07 postmaster[1708] LOG:  received fast shutdown request
+2023-08-31 21:55:11.112 +07 postmaster[1708] LOG:  aborting any active transactions
+2023-08-31 21:55:11.112 +07 postmaster[1708] LOG:  background worker "logical replication launcher" (PID 1716) exited with exit code 1
+2023-08-31 21:55:11.112 +07 checkpointer[1711] LOG:  shutting down
+2023-08-31 21:55:11.112 +07 checkpointer[1711] LOG:  checkpoint starting: shutdown immediate
+2023-08-31 21:55:11.118 +07 checkpointer[1711] LOG:  checkpoint complete: wrote 892 buffers (5.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.001 s, total=0.006 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4024 kB, estimate=4024 kB
+2023-08-31 21:55:11.122 +07 postmaster[1708] LOG:  database system is shut down

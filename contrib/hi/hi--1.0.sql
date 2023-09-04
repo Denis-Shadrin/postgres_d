@@ -14,40 +14,42 @@ CREATE FUNCTION get_int_x2 (int4)
 RETURNS int4
 AS 'MODULE_PATHNAME'
 LANGUAGE C;
---//добовить в полученонму тексту !!!
+
+--//добавить в полученному тексту !!!
 CREATE FUNCTION get_text_aggresive (text)
 RETURNS text
 AS 'MODULE_PATHNAME'
-
 LANGUAGE C;
 
 
-CREATE TYPE test_cn;
+CREATE TYPE test_type;
 --считывает числа из строки
 CREATE OR REPLACE FUNCTION test_t_in( cstring )
-RETURNS test_cn
+RETURNS test_type
 AS 'MODULE_PATHNAME'
 LANGUAGE C IMMUTABLE STRICT;
+
+
 --получает композитынй тип и выводит его
-CREATE OR REPLACE FUNCTION test_t_out( test_cn )
+CREATE OR REPLACE FUNCTION test_t_out( test_type )
 RETURNS cstring
 AS 'MODULE_PATHNAME'
 LANGUAGE C IMMUTABLE STRICT;
 
-CREATE TYPE test_cn
+CREATE TYPE test_type
 (
 internallength = 8,
 input = test_t_in,
 output = test_t_out
 );
 --получает композитынй тип и возвращает новый с изменёнными данными
-CREATE OR REPLACE FUNCTION test_t_multiply(test_cn)
-RETURNS test_cn
+CREATE OR REPLACE FUNCTION test_t_multiply(test_type)
+RETURNS test_type
 AS 'MODULE_PATHNAME'
 LANGUAGE C;
 
 --получает из записи поле и возвращает true если меньше либо = limit
-CREATE FUNCTION test_tb(test_table, integer) RETURNS boolean
+CREATE FUNCTION return_test_from_record(test_table, integer) RETURNS boolean
 AS 'MODULE_PATHNAME'
 LANGUAGE C STRICT;
 --возврат записи по типам аттрибутов указанной таблицы
@@ -83,23 +85,23 @@ LANGUAGE C;
 
 --//запись и получение текста. shared memory 
 
---CREATE FUNCTION test_shmem_set_t (text)
---RETURNS text
+CREATE FUNCTION test_shmem_set_t (text)
+RETURNS text
+AS 'MODULE_PATHNAME'
+LANGUAGE C;
+
+CREATE FUNCTION test_shmem_get_t ()
+RETURNS text
+AS 'MODULE_PATHNAME'
+LANGUAGE C;
+
+--тестовая работа с latch. метод синхронизации потоков
+--CREATE FUNCTION latch_test1 (text)
+--RETURNS void
 --AS 'MODULE_PATHNAME'
 --LANGUAGE C;
 --
---CREATE FUNCTION test_shmem_get_t ()
---RETURNS text
+--CREATE FUNCTION latch_test2 ()
+--RETURNS void
 --AS 'MODULE_PATHNAME'
 --LANGUAGE C;
-
---тестовая работа с latch. метод синхронизации потоков
-CREATE FUNCTION latch_test1 (text)
-RETURNS void
-AS 'MODULE_PATHNAME'
-LANGUAGE C;
-
-CREATE FUNCTION latch_test2 ()
-RETURNS void
-AS 'MODULE_PATHNAME'
-LANGUAGE C;

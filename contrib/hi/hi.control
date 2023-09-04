@@ -1,10 +1,4 @@
-# cube extension
+# hi extension
 comment = ''
 default_version = '1.0'
 module_pathname = '$libdir/hi'
-
-#latch_example_version = '1.0'
-#latch_example_loader = '$libdir/latch_example'
-
-#relocatable = true
-#trusted = true

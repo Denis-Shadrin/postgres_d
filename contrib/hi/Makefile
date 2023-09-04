@@ -6,10 +6,6 @@ DATA = hi--1.0.sql
 PGFILEDESC = "test extension"
 REGRESS = hi
 
-#PG_CONFIG = /postgresql/15/bin/pg_config
-#PGXS := $(shell $(PG_CONFIG) --pgxs)
-#include $(PGXS)
-
 ifdef USE_PGXS
 PG_CONFIG = pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
